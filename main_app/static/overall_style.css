@@ -1,0 +1,26 @@
+#main-header {
+  font-family:'Roboto Slab',monospace;
+  font-size:4em;
+  font-weight: bolder;
+  color: #BA4A00;
+}
+.body-text {
+  font-family:'Roboto Slab',monospace;
+  font-size:2em;
+  color: #D4AC0D;
+}
+
+#background {
+  background-color: #504432;
+}
+.radius {
+  padding: 0.1em 0.1em 0.1em 0.1em ;
+  margin-bottom: 0.1em ;
+  margin-top: 0.1em ;
+}
+
+#icon {
+  color: #85C1E9;
+  font-size:4em;
+  align-self:  center;
+}
