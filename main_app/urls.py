@@ -17,6 +17,6 @@ from django.conf.urls import url
 from main_app import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home')
-    url(r'^([0-9]+)/$', views.viewpictures, name='viewpictures')
+    url(r'^$', views.home, name='home'),
+    url(r'^pictures/$', views.viewpictures, name='viewpictures')
 ]

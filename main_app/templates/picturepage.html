@@ -1,5 +1,17 @@
 {%extends 'base.html'%}
 {%load staticfiles%}
 {%block content%}
-
+<div class="container-fluid">
+  <div class="row">
+{%for picture in pictures%}
+    <div class="col-sm-3 panel">
+      <h1 class="picture-header"> {{picture.name}} </h1>
+      <img class="picture-body" src="{{picture.img_url}}">
+      <p class="picture-text">{{picture.description}}</p>
+    </div>
+  {%if forloop.counter|divisibleby:4 and not forloop.last%}
+  </div><div class="row">
+  {%endif%}
+{%endfor%}
+</div>
 {%endblock%}
