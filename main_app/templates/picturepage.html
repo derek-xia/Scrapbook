@@ -4,10 +4,12 @@
 <div class="container-fluid">
   <div class="row">
 {%for picture in pictures%}
-    <div class="col-sm-3 panel">
-      <h1 class="picture-header"> {{picture.name}} </h1>
-      <img class="picture-body" src="{{picture.img_url}}">
-      <p class="picture-text">{{picture.description}}</p>
+    <div class="col-md-3 col-xs-10">
+      <div class="col-xs-12 well">
+      <p class="lead"> {{picture.name}} </p>
+      <img class="picture-body img-responsive" src="{{picture.img_url}}">
+      <p class="body-text">{{picture.description}}</p>
+    </div>
     </div>
   {%if forloop.counter|divisibleby:4 and not forloop.last%}
   </div><div class="row">

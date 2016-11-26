@@ -18,5 +18,6 @@ from main_app import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^pictures/$', views.viewpictures, name='viewpictures')
+    url(r'^pictures/$', views.viewpictures, name='viewpictures'),
+    url(r'^upload_image/$', views.upload_images, name='uploadimages')
 ]

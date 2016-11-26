@@ -2,16 +2,28 @@
 {%load staticfiles%}
 
 {%block content%}
-<box>
-  <ul class="text-overflow">
-    <li class="body-text">This is a website.</li>
-    <li class="body-text">Does it look good?</li>
-    <li class="body-text">I don't think so.</li>
+  <ul class="list-unstyled" style="padding-left: 15%">
+<!--
+    <li class="hidden-xs hidden-sm test-word"><span class="glyphicon glyphicon-king"></span><li>
+    <li class="lead hidden-xs hidden-sm test-word">Hi Derek! You are the best!</li>
+    <li class="visible-sm visible-xs test-text"><span class="glyphicon glyphicon-baby-formula"></span><li>
+    <li class = "visible-sm visible-xs test-text">GET OFF THE IPAD DANIEL!!!!</li>
+-->
   </ul>
-</box>
-<box>
-  <p>Click the icon for pictures:
-  <a href="{% url 'viewpictures' %}"><span class="glyphicon glyphicon-picture"></span></a>
-  </p>
-</box>
+
+<div class="panel">
+  <div class="panel-heading title-text">
+    Upload an Image
+  </div>
+  <div class="panel-body body-text">
+    <form action="upload_image/" method="post">
+      {%csrf_token%}
+    <table>
+      {{form.as_table}}
+    </table>
+      <input type="submit" value="Submit" class="btn btn-success"/>
+    </form>
+  </div>
+</div>
+{{error}}
 {%endblock%}

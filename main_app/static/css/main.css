@@ -1,0 +1,67 @@
+body div{
+  font-family:'Dosis',monospace;
+}
+#main-header {
+  font-size:4em;
+  font-weight: bold;
+  font-style: bold;
+  color: #BA4A00;
+  text-decoration:none;
+}
+
+
+a:hover {
+  text-decoration:none !important;
+}
+
+#main-header:hover {
+  color: #ba7500;
+}
+.body-text{
+  font-family: 'Lato';
+  font-size:1em;
+}
+.title-text {
+  font-size:2em;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+.panel {
+  background-color: #EC9D26 ;
+}
+
+tbody tr td input, tbody tr td textarea{
+  margin: 1em 0em 0em 1em !important;
+}
+/*
+.test-text {
+  font-family:'Roboto Slab',monospace;
+  font-size:5em;
+  color: #FF5733;
+}
+
+.test-word{
+  font-family:'fantasy';
+  font-size:2.5em;
+  color:#5DADE2;
+}
+*/
+/*pictures*/
+.picture-header {
+  font-size:2.5em;
+  font-weight: bolder;
+  color: #BA4A00;
+}
+
+
+.picture-body {
+  position:relative;
+  width: 25em;
+  max-height: 100%;
+}
+.container-fluid .row{
+  align-items: flex-end !important;
+}
+
+/*navbar*/

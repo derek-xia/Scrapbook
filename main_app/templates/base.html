@@ -2,25 +2,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--<link rel="stylesheet" href="overall_style.css">-->
-  <link rel="stylesheet" href="{% static 'overall_style.css' %}">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</head>
-<body id="background">
-<div class="container-fluid">
+  <!--<link rel="stylesheet" href="main.css">-->
+  <link rel="stylesheet" href="{% static 'css\main.css' %}">
+  <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}">
+  <script src="{% static 'js\bootstrap.js' %}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Lato" rel="stylesheet">
+
+<body>
+<div class="container">
+<div class="row">
+  <div class="col-xs-9 col-xs-offset-1 visible-xs" >
+      <a href="{%url 'home' %}"><h1 id="main-header" style="font-size: 3em">A USEFUL Website!!</h1></a>
+  </div>
+  <div class="col-xs-1 col-xs-offset-1 visible-xs" style="font-size: 1.5em">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle Navigation</span>
+      <i class="glyphicon glyphicon-chevron-down"></i>
+    </button>
+  </div>
+
+  <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+    <li class="lead">
+      <a href="{% url 'viewpictures' %}">Photos</a>
+    </li>
+    <li class="lead">
+      <a href="#">Sign in</a>
+    </li>
+  </ul>
+</div>
+
   <div class="row">
-    <div class="col-md-2">
-      <span class="glyphicon glyphicon-text-size"></span>
-      <span class="glyphicon glyphicon-bold"></span>
-      <span class="glyphicon glyphicon-eur"></span>      
-    </div>
-    <div class="col-md-6">
-      <h1 class="radius" id="main-header">A USEFUL website!</h1>
+    <div class="col-md-11 col-md-offset-1 hidden-xs">
+        <a href="{%url 'home' %}"><h1 id="main-header" style="padding-bottom:5%">A USEFUL Website!!</h1></a>
     </div>
   </div>
+</div>
 {%block content%}
 {%endblock%}
-  </div>
 </body>
 </html>
