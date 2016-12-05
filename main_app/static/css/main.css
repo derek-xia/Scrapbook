@@ -64,4 +64,8 @@ tbody tr td input, tbody tr td textarea{
   align-items: flex-end !important;
 }
 
+.row.is_flex{
+  display:flex;
+  align-items: flex-end !important;
+}
 /*navbar*/

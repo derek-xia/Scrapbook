@@ -19,5 +19,8 @@ from main_app import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^pictures/$', views.viewpictures, name='viewpictures'),
-    url(r'^upload_image/$', views.upload_images, name='uploadimages')
+    url(r'^upload_image/$', views.upload_images, name='uploadimages'),
+    #url(r'^u/(\w+)/$',views.user_page, name='userpage'),
+    url(r'^signup/$',views.sign_up, name='signup'),
+    url(r'^login/$',views.log_in, name='login')
 ]
