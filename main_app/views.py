@@ -46,10 +46,19 @@ def log_in(request):
         if form.is_valid():
             u = form.cleaned_data['username']
             p = form.cleaned_data['password']
-            user = User(username=u,password=p)
+            user = authenticate(username=u,password=p)
             if user is not None:
-                be=print("The username ")
-                login(request,user,backend=be)
+                if user.is_active:
+                    login(request,user)
+                    return HttpResponseRedirect('/')
+                else:
+                    print('This account has been disabled!')
+            else:
+                print('The username and password were incorrect')
     else:
         form = LogInForm()
         return render(request, 'login.html', {'form':form})
+
+def log_out(request):
+    logout(request)
+    return HttpResponseRedirect('/pictures')
