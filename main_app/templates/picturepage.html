@@ -1,19 +1,19 @@
 {%extends 'base.html'%}
 {%load staticfiles%}
 {%block content%}
-<div class="container-fluid" style="margin: 5%">
+<div class="container-fluid" style="margin: 5% 5% 5% 5%">
   <div class="row">
 {%for picture in pictures%}
-    <div class="col-md-3 col-xs-10">
-      <div class="col-xs-12 well">
-      <p class="title-text"> {{picture.name}} </p>
-      <img class="picture-body img-responsive" src="{{picture.img_url}}">
-      <p class="body-text">{{picture.description}}</p>
-      <p class="subtext">{{picture.user}}</p>
+    <div class="col-md-4 col-sm-10">
+      <div class="well">
+        <p class="title-text"> {{picture.name}} </p>
+        <img class="picture-body img-responsive" src="{{picture.image.url}}">
+        <p class="body-text">{{picture.description}}</p>
+        <a href='/{{picture.user.username}}/'><p class="subtext">{{picture.user}}</p></a>
+      </div>
     </div>
-    </div>
-  {%if forloop.counter|divisibleby:4 and not forloop.last%}
-  </div><div class="row">
+  {%if forloop.counter|divisibleby:3 and not forloop.last%}
+</div><div class="row myrow">
   {%endif%}
 {%endfor%}
 </div>

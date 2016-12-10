@@ -2,7 +2,7 @@ body div{
   font-family:'Ubuntu';
 }
 #main-header {
-  font-size:4em;  
+  font-size:4em;
   font-family:'Bungee',cursive;
   color: #BA4A00;
   text-decoration:none;
@@ -18,12 +18,12 @@ a:hover {
 }
 .body-text{
   font-family: 'Ubuntu';
-  font-size:1.2em;
+  font-size:1em;
   line-height: 1.6em;
 }
 .title-text {
   font-size:2em;
-  font-weight: bolder;  
+  font-weight: bolder;
 }
 
 tbody tr td input, tbody tr td textarea{
@@ -33,15 +33,20 @@ tbody tr td input, tbody tr td textarea{
 /*pictures*/
 .picture-header {
   font-size:2.5em;
-  font-weight: bolder;
-  color: #BA4A00;
+  font-weight: bolder;  
 }
 
 .picture-body {
   position:relative;
-  width: 25em;
+  width: 100em;
   max-height: 100%;
   margin-bottom: 5%;
+}
+
+.user-picture {
+  position:relative;
+  max-width:60%;
+  margin: 3% 10% 4% 10%;
 }
 
 .subtext {
@@ -49,9 +54,16 @@ tbody tr td input, tbody tr td textarea{
   color: #C3C3C3;
 
 }
-.container-fluid .row{
-  align-items: flex-end;
+
+.frame {
+  width: auto;
+  margin-bottom:5%;
 }
+/*.myrow > * {
+    display: table-cell;
+    vertical-align: bottom;
+    float:none;
+}*/
 
 .row.is_flex{
   display:flex;

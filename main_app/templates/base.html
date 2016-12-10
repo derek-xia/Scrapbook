@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--<link rel="stylesheet" href="main.css">-->  
+  <!--<link rel="stylesheet" href="main.css">-->
   <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'css\main.css' %}">
   <script src="{% static 'js\bootstrap.js' %}"></script>
@@ -24,6 +24,9 @@
   <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
     <li class="lead">
       <a href="{% url 'viewpictures' %}">Photos</a>
+    </li>
+    <li class="lead">
+      <a href="{% url 'signup' %}">Sign Up</a>
     </li>
     <li class="lead">
       <a href="{%url 'login' %}">Login</a>

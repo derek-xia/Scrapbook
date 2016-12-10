@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block content%}
+<div container-fluid>
+  <h1 class='picture-header text-center frame'>{{username}}</h1>
+{%for picture in pictures%}
+  <div class='center-block text-center frame'>
+    <p class="title-text"> {{picture.name}} </p>
+    <img class="user-picture" src="{{picture.image.url}}">
+    <p class="body-text">{{picture.description}}</p>
+    <p class="subtext">{{picture.user}}</p>
+  </div>
+{%endfor%}
+</div>
+{%endblock%}

@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Picture(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
-    img_url = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='main_app',default='media/default.png')
     user = models.ForeignKey(User)
 
     def __str__(self):
@@ -18,7 +18,7 @@ class PictureForm(forms.ModelForm):
         widgets = {
             'description': forms.Textarea(attrs={'cols': 40, 'rows': 5}),
         }
-        fields = ['name','description','img_url']
+        fields = ['name','description','image']
 
 class SignupForm(forms.Form):
     username=forms.CharField(max_length=20)
