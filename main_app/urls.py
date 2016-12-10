@@ -14,14 +14,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
+from django.views.static import serve
 from main_app import views
 
 urlpatterns = [
     url(r'upload_picture/$', views.home, name='home'),
     url(r'^$', views.viewpictures, name='viewpictures'),
-    url(r'^upload_image/$', views.upload_images, name='uploadimages'),
-    #url(r'^u/(\w+)/$',views.user_page, name='userpage'),
+    url(r'^upload_picture/upload_image/$', views.upload_images, name='uploadimages'),
+
     url(r'^signup/$',views.sign_up, name='signup'),
     url(r'^login/$',views.log_in, name='login'),
-    url(r'^logout/$',views.log_out, name='logout')    
+    url(r'^logout/$',views.log_out, name='logout'),
+    url(r'^(\w+)/$',views.user_page, name='userpage')
 ]
+
+if settings.DEBUG:
+ urlpatterns += [
+ url(r'^media/(?P<path>.*)$', serve,
+ {'document_root': settings.MEDIA_ROOT,}),
+ ]

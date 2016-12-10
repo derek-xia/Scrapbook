@@ -17,7 +17,7 @@ def viewpictures(request):
     return render(request, 'picturepage.html', {'pictures':p})
 
 def upload_images(request):
-    form = PictureForm(request.POST)
+    form = PictureForm(request.POST,request.FILES)
     if form.is_valid():
         picture = form.save(commit=False)
         picture.user = request.user
@@ -62,3 +62,8 @@ def log_in(request):
 def log_out(request):
     logout(request)
     return HttpResponseRedirect('/pictures')
+
+def user_page(request, username):
+    user = User.objects.get(username=username)
+    pictures = Picture.objects.filter(user=user)
+    return render(request, 'userpage.html',{'pictures':pictures,'username':username})
