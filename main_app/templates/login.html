@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="panel">
+  <div class="panel-heading title-text">
+    Login
+  </div>
+  <div class="panel-body body-text">
+    <form action="." method="post">
+      {%csrf_token%}
+    <table>
+      {{form.as_table}}
+    </table>
+      <input type="submit" value="Submit" class="btn btn-success"/>
+    </form>
+  </div>
+</div>
+{%endblock%}
